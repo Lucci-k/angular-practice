@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  border: 1px solid;
+  border-radius: 20px;
+  box-shadow: 5pxx 10px;
+  padding: 50px 70px;
+  width: 70%;
+  height: 150px;
+  margin: 20px auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-select-box {
+  width: 200px;
+  height: 30px;
+}
+
+.bottom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+

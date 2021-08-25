@@ -1,0 +1,21 @@
+<label>SeRVeName</label>
+<!-- <input type="text" (input)="onUpdateServername($event)"> -->
+<!-- below is how to do two way binding -->
+<input type="text" [(ngModel)]=serverName>
+<!-- <p>{{ serverName }}</p> -->
+<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- <p [innerText]='allowNewServer'></p>
+<p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated; else noServer">Server was created, server's name is: {{serverName}}</p>
+<ng-template #noServer>
+  <p>
+    The server was not created!
+  </p>
+</ng-template>
+
+<input type="text"[(ngModel)]=username>
+<p>{{ username }}</p>
+<button [disabled]="!username" (click)="onClearUsername()">notEmpty</button>
+<server></server>
+<server></server>
+

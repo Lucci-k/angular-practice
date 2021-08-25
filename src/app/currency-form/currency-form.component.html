@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="input-row">
+    <div class="input-item">
+      <label for="amount">Amount</label>
+      <input class="input-select-box" type="number" min="0.01" step="0.01" max="2500" [(ngModel)]=amount>
+    </div>
+    <div class="input-item">
+      <label for="from">From</label>
+    <select class="input-select-box" [(ngModel)]="from">
+      <option *ngFor="let option of options1">
+        {{option.name}}
+      </option>
+    </select>
+    </div>
+    <div class="input-item">
+      <label for="to">To</label>
+      <select class="input-select-box" [(ngModel)]="to">
+        <option *ngFor="let option of options1">
+          {{option.name}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="bottom-row">
+    <p *ngIf="finalAmount; else noAmount">Final Amount: {{finalAmount}}</p>
+    <ng-template #noAmount>
+      <p>
+        we use absurd transactional rates
+      </p>
+    </ng-template>
+    <button (click)="onMakeConversion(from, to, amount)">Submit</button>
+  </div>
+</div>

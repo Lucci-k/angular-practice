@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-project';
+  title = 'my-first-project !!!!!!';
+
+  handleClick(color: string) {  
+    this.title = color;
+  } 
 }
